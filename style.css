@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    font-size: 12pt;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    max-width: 750px;
+    background-color: rgb(255, 255, 255, 0.1);
+    height: 75px;
+    top: 0;
+}
+
+#tags {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+#tags tr td {
+    padding: 5px;
+    text-align: center;
+    width: 33%;
+    user-select: none;
+}
+
+#ht {
+    font-size: 20pt;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#main {
+    margin-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#gps {
+    display: none;
+}
+
+#qr {
+    display: none;
+}
+
+#qrr {
+    display: none;
+}
+
+#gps_page {
+    display: none;
+}
+
+#qr_page {
+    display: none;
+}
+
+#qrr_page {
+    display: none;
+}
+
+#gps:checked~#main #gps_page {
+    display: block;
+}
+
+#qr:checked~#main #qr_page {
+    display: block;
+}
+
+#qrr:checked~#main #qrr_page {
+    display: block;
+}
+
+#gps:checked~header #tags #gps_tag {
+    color: blue;
+    font-weight: bold;
+    border-bottom: 2pt solid blue;
+}
+
+#qr:checked~header #tags #qr_tag {
+    color: blue;
+    font-weight: bold;
+    border-bottom: 2pt solid blue;
+}
+
+#qrr:checked~header #tags #qrr_tag {
+    color: blue;
+    font-weight: bold;
+    border-bottom: 2pt solid blue;
+}
+
+.pt {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+#map {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 60vh;
+}
+
+#qr_info {
+    width: 100%;
+}
+
+#qr_info td {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#qr_info input {
+    width: 90%;
+    padding: 5px;
+}
+
+#qr_info select {
+    padding: 5px;
+    width: 60%;
+}
+
+td.qr_info {
+    width: 33%;
+}
+
+#qrtext {
+    width: 100%;
+}
+
+#qrcreate {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#qrinfo {
+    padding-left: 20px;
+    word-break: break-all;
+}
+
+#qrr_cam {
+    width: 100%;
+}
+
+#qrr_cam tr td {
+    text-align: center;
+}
+
+#qrdata {
+    padding-top: 10px;
+    padding-left: 30px;
+    word-break: break-all;
+}
+
+td.min {
+    width: 1%;
+    white-space: nowrap;
+    line-height: 1.25;
+}
+
+video {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
